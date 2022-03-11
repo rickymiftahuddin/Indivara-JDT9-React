@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "./App.css";
 import usePokemon from "./hooks/usePokemon";
 import { getPokemon, getPokemonByName } from "./services/axios";
+import { Helmet } from "react-helmet";
 
 function App() {
   const { addPokemonToCart } = usePokemon();
@@ -45,6 +46,11 @@ function App() {
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
       />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Home | Poketot</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       {/* NAV */}
       <div class="navbar-fixed">
         <nav class="amber lighten-1 top">

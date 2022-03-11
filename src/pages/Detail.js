@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import "../App.css";
 import { getPokemonByName } from "../services/axios";
+import { Helmet } from "react-helmet";
 
 function Detail() {
   const params = useParams();
@@ -38,6 +39,11 @@ function Detail() {
         href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet"
       />
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Detail | Poketot</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       {/* NAV */}
       <div class="navbar-fixed">
         <nav class="amber lighten-1 top">
