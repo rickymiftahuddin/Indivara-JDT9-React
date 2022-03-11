@@ -80,17 +80,18 @@ function Cart() {
                 <div class="card col s4 l4">
                   <div class="card-image">
                     <img
+                      alt="span"
                       src={item?.img}
                       onClick={() =>
                         navigate(`/pokemons/${item.id}?name=${item.name}`)
                       }
                     />
-                    <a
+                    <button
                       class="btn-floating btn-large halfway-fab waves-effect waves-light red"
                       onClick={() => deletePokemonFromCart(index)}
                     >
                       <i class="material-icons">remove_shopping_cart</i>
-                    </a>
+                    </button>
                   </div>
                   <div class="card-content">
                     <span class="card-title">

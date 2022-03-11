@@ -109,6 +109,7 @@ function App() {
                 <div class="card col s4 l4">
                   <div class="card-image">
                     <img
+                      alt="span"
                       style={{ cursor: "pointer" }}
                       src={item?.img}
                       onClick={() =>
@@ -127,8 +128,8 @@ function App() {
                   </div>
                   <div class="card-content">
                     <span class="card-title">
-                      <a
-                        href="#"
+                      <div
+                        style={{ cursor: "pointer" }}
                         key={item.id}
                         class="amber-text text-lighten-1"
                         onClick={() =>
@@ -136,7 +137,7 @@ function App() {
                         }
                       >
                         {item?.name}
-                      </a>
+                      </div>
                     </span>
                     <p>
                       I am a very simple card. I am good at containing small

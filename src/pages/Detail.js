@@ -70,7 +70,7 @@ function Detail() {
               arrow_back
             </i>
           </div>
-          <img src={pokemon?.img} style={{ height: 470 }} />
+          <img alt="span" src={pokemon?.img} style={{ height: 470 }} />
         </div>
         <div class="col s6">
           <h1>Detail</h1>
