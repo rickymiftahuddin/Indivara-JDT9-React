@@ -9,15 +9,17 @@ import Detail from "./pages/Detail";
 import Cart from "./pages/Cart";
 
 ReactDOM.render(
-  <BrowserRouter>
-    <StateProvider>
-      <Routes>
-        <Route path="/" element={<App />} />
-        <Route path="detail/:id" element={<Detail />} />
-        <Route path="cart" element={<Cart />} />
-      </Routes>
-    </StateProvider>
-  </BrowserRouter>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <StateProvider>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="detail/:id" element={<Detail />} />
+          <Route path="cart" element={<Cart />} />
+        </Routes>
+      </StateProvider>
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
