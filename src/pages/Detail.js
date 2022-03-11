@@ -1,6 +1,6 @@
-import "../App.css";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "../App.css";
 import { getPokemonByName } from "../services/axios";
 
 function Detail() {
@@ -65,11 +65,11 @@ function Detail() {
       {/* CONTENT */}
       <div class="row container light-blue-text text-darken-4">
         <div class="col s6">
-          <a style={{ cursor: "pointer" }} onClick={() => navigate(-1)}>
+          <div style={{ cursor: "pointer" }} onClick={() => navigate(-1)}>
             <i class="material-icons medium light-blue-text text-darken-4">
               arrow_back
             </i>
-          </a>
+          </div>
           <img src={pokemon?.img} style={{ height: 470 }} />
         </div>
         <div class="col s6">
@@ -99,13 +99,13 @@ function Detail() {
           <div class="row">
             <div class="col l6 s12">
               <h5 class="amber-text text-lighten-1">Footer Content</h5>
-              <p class="">
+              <p>
                 Ini app dibuat cuma buat tugas kawan, bukan untuk dijual apalagi
                 digoreng.
               </p>
             </div>
             <div class="col l4 offset-l2 s12 amber-text text-lighten-1">
-              <h5 class="">Ceritanya sosmed</h5>
+              <h5>Ceritanya sosmed</h5>
               <ul>
                 <li>
                   <a

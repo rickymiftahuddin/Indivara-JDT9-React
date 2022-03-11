@@ -1,8 +1,7 @@
-import logo from "./logo.svg";
-import "./App.css";
-import usePokemon from "./hooks/usePokemon";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./App.css";
+import usePokemon from "./hooks/usePokemon";
 import { getPokemon, getPokemonByName } from "./services/axios";
 
 function App() {
@@ -116,7 +115,7 @@ function App() {
                         navigate(`/detail/${item.id}?name=${item.name}`)
                       }
                     />
-                    <a
+                    <button
                       class="btn-floating btn-large halfway-fab waves-effect waves-light amber lighten-1"
                       onClick={(e) => {
                         e.preventDefault();
@@ -124,12 +123,12 @@ function App() {
                       }}
                     >
                       <i class="material-icons">add_shopping_cart</i>
-                    </a>
+                    </button>
                   </div>
                   <div class="card-content">
                     <span class="card-title">
                       <a
-                        href=""
+                        href="#"
                         key={item.id}
                         class="amber-text text-lighten-1"
                         onClick={() =>
@@ -158,13 +157,13 @@ function App() {
           <div class="row">
             <div class="col l6 s12">
               <h5 class="amber-text text-lighten-1">Footer Content</h5>
-              <p class="">
+              <p>
                 Ini app dibuat cuma buat tugas kawan, bukan untuk dijual apalagi
                 digoreng.
               </p>
             </div>
             <div class="col l4 offset-l2 s12 amber-text text-lighten-1">
-              <h5 class="">Ceritanya sosmed</h5>
+              <h5>Ceritanya sosmed</h5>
               <ul>
                 <li>
                   <a
