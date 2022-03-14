@@ -7,6 +7,7 @@ import { StateProvider } from "./hooks/useSM";
 import reportWebVitals from "./reportWebVitals";
 import Detail from "./pages/Detail";
 import Cart from "./pages/Cart";
+import Login from "./pages/Login";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -16,6 +17,7 @@ ReactDOM.render(
           <Route path="/" element={<App />} />
           <Route path="detail/:id" element={<Detail />} />
           <Route path="cart" element={<Cart />} />
+          <Route path="login" element={<Login />} />
         </Routes>
       </StateProvider>
     </BrowserRouter>

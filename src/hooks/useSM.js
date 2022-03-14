@@ -1,32 +1,11 @@
 import { createContext, useContext, useEffect, useReducer } from "react";
-import { switcherPokemons } from "./usePokemon";
+import reducer, { initialReducerState } from "./reducers";
 
 const SMStateContext = createContext();
 const SMUpdaterContext = createContext();
 
-const switcher = (state, action) => {
-  const dataPokemon = switcherPokemons(state, action);
-  const dataDigimon = switcherPokemons(state, action);
-  let states = { ...dataPokemon, dataDigimon };
-  if (action.type === "PERSIST") {
-    states = {
-      ...state,
-      ...action.data,
-    };
-  }
-  return states;
-};
-const reducer = (state, action) => {
-  const data = switcher(state, action);
-  const persistData = { pokemonCarts: data.pokemonCarts };
-  localStorage.setItem("persistData", JSON.stringify(persistData));
-  return data;
-};
-
 export const StateProvider = ({ children }) => {
-  const [state, dispatch] = useReducer(reducer, {
-    pokemonCarts: [],
-  });
+  const [state, dispatch] = useReducer(reducer, initialReducerState);
 
   useEffect(() => {
     const data = localStorage.getItem("persistData");
@@ -45,5 +24,4 @@ export const StateProvider = ({ children }) => {
 };
 
 export const useSMState = () => useContext(SMStateContext);
-
 export const useSMUpdater = () => useContext(SMUpdaterContext);

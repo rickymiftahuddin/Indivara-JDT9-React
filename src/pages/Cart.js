@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 import usePokemon from "../hooks/usePokemon";
+import useAuth from "../hooks/useAuth";
 import { Helmet } from "react-helmet";
 
 function Cart() {
   const navigate = useNavigate();
   const { pokemonCarts, deletePokemonFromCart } = usePokemon();
+  useAuth("protected");
 
   return (
     <div>
